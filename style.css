@@ -1,0 +1,40 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#1a1a2e;color:white;overflow:hidden;user-select:none;}
+.screen{display:none;width:100vw;height:100vh;position:absolute;top:0;left:0;}
+.active{display:flex;}
+
+/* LOBBY */
+#lobbyScreen{flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#16213e,#0f3460);}
+.box{background:rgba(0,0,0,.5);padding:2rem;border-radius:20px;box-shadow:0 0 30px #ffd700;width:90%;max-width:400px;}
+h1{text-align:center;color:#ffd700;margin-bottom:.5rem;font-size:1.8rem;}
+.sub{text-align:center;color:#aaa;margin-bottom:1.5rem;font-size:.9rem;line-height:1.4;}
+input{width:100%;padding:.9rem;margin:.5rem 0;border-radius:10px;border:none;font-size:1rem;background:#f0f0f0;color:#000;}
+button{width:100%;padding:.9rem;margin-top:.8rem;border-radius:10px;border:none;font-size:1.1rem;font-weight:bold;cursor:pointer;transition:.3s;}
+.btn-start{background:linear-gradient(90deg,#ffd700,#ff9800);color:#000;}
+.btn-start:hover{transform:scale(1.05);box-shadow:0 0 20px #ffd700;}
+.btn-lb{background:linear-gradient(90deg,#ff9800,#f44336);color:white;}
+.err{color:#ff6b6b;text-align:center;margin-top:1rem;display:none;}
+
+/* GAME */
+#gameScreen{flex-direction:column;background:#0f3460;}
+.header{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;background:rgba(0,0,0,.4);font-size:.85rem;flex-wrap:wrap;gap:.3rem;}
+.hearts{color:#ff4757;font-size:1.1rem;letter-spacing:2px;}
+.timer{color:#fffa65;font-weight:bold;}
+#gameCanvas{width:100%;height:calc(100vh - 130px);background:linear-gradient(180deg,#87ceeb,#e0f7fa);display:block;}
+.controls{display:flex;justify-content:space-around;align-items:center;padding:.5rem;background:rgba(0,0,0,.3);}
+.ctrl-btn{width:70px;height:52px;border-radius:12px;background:#00a8cc;color:white;font-size:1.5rem;border:none;touch-action:manipulation;}
+.btn-pause{background:#ffa502;width:auto;padding:0 1.2rem;font-size:1rem;}
+
+/* OVERLAY */
+.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:100;}
+.overlay.active{display:flex;}
+.overlay h2{font-size:2rem;margin-bottom:1.5rem;}
+.overlay p{margin:.5rem 0;font-size:1.1rem;}
+.overlay button{width:220px;margin:.5rem;}
+
+/* LEADERBOARD */
+#lbScreen{flex-direction:column;align-items:center;padding:2rem;background:#16213e;}
+.lb-box{background:rgba(0,0,0,.5);padding:1.5rem;border-radius:15px;width:90%;max-width:400px;}
+.lb-box h2{text-align:center;color:#ffd700;margin-bottom:1.2rem;}
+.lb-item{display:flex;justify-content:space-between;padding:.7rem;border-bottom:1px solid #444;font-size:1rem;}
+.btn-back{background:#666;color:white;margin-top:1rem;}

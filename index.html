@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>⭐ Game Bintang Petualang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOBBY -->
+<div id="lobbyScreen" class="screen active">
+  <div class="box">
+    <h1>⭐ PETUALANG BINTANG</h1>
+    <p class="sub">✨ Bintang Bertambah Saat Habis • 5 Nyawa • 5 Ronde<br>⏱️ Mulai 30 Detik — Berkurang Tiap Ronde!</p>
+    <input type="text" id="username" placeholder="Masukkan Nama" required>
+    <input type="tel" id="whatsapp" placeholder="Nomor WhatsApp (081234567890)" required>
+    <button class="btn-start" onclick="startGame()">🚀 MULAI BERMAIN</button>
+    <div class="err" id="errMsg">⚠️ Lengkapi nama & nomor WA dulu!</div>
+    <button class="btn-lb" onclick="showLB()">🏆 LIHAT RANKING</button>
+  </div>
+</div>
+
+<!-- LAYAR GAME -->
+<div id="gameScreen" class="screen">
+  <div class="header">
+    <div class="hearts" id="hearts">❤️❤️❤️❤️❤️</div>
+    <div>Ronde: <span id="round">1</span>/5</div>
+    <div>⭐ Bintang: <span id="starCount">0</span></div>
+    <div class="timer">⏱️ <span id="timer">30</span>s</div>
+    <div>Skor: <span id="score">0</span></div>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+  <div class="controls">
+    <button class="ctrl-btn" id="btnLeft">◀</button>
+    <button class="ctrl-btn btn-pause" id="btnPause">⏸️</button>
+    <button class="ctrl-btn" id="btnRight">▶</button>
+    <button class="ctrl-btn" id="btnUp">⬆</button>
+  </div>
+</div>
+
+<!-- PAUSE -->
+<div id="pauseOverlay" class="overlay">
+  <h2>⏸️ Jeda Permainan</h2>
+  <button onclick="resumeGame()">▶️ LANJUTKAN</button>
+  <button onclick="quitGame()">🏠 KEMBALI KE MENU</button>
+</div>
+
+<!-- GAME OVER -->
+<div id="goOverlay" class="overlay">
+  <h2 id="goTitle">💀 GAME OVER</h2>
+  <p>Skor Akhir: <strong id="finalScore">0</strong></p>
+  <p>Ronde Tercapai: <strong id="finalRound">1</strong>/5</p>
+  <button onclick="restartGame()">🔄 MAIN LAGI</button>
+  <button onclick="goToLobby()">🏠 KE MENU UTAMA</button>
+</div>
+
+<!-- LEADERBOARD -->
+<div id="lbScreen" class="screen">
+  <div class="lb-box">
+    <h2>🏆 PEMAIN TERBAIK</h2>
+    <div id="lbList"></div>
+    <button class="btn-back" onclick="hideLB()">🔙 KEMBALI</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
