@@ -1,5 +1,5 @@
 // ⚠️ GANTI URL WEB APP GOOGLE SHEET-MU DI SINI!
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbyAlVVulUSf5VLvG74s9WG2KNfBxAJcAFb1w7Zyz8iYoQhwrlifJoMbFtGAg3dDUGJY9g/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbzy5FhywYujRGUSvblstz79UbXHkGAuL63Qx5_9NWZEiE_4Rvfq2SZd4EQkUur5mVmpQg/exec";
 
 let user = {username:"", whatsapp:""};
 let gameState = {
